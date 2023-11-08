@@ -1,0 +1,25 @@
+#fundo-azul{
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    transition: background-color 1s;
+}
+#fundo-azul:hover{
+    background-color: red;
+}
+#fundo-verde{
+    background-color: green;
+    width: 100px;
+    height:200px;
+    transition:width 1s;
+}
+#fundo-verde:hover{
+    width: 400px;
+}
+img{
+    opacity: 100%;
+    transition: opacity 1s;
+}
+img:hover{
+    opacity: 0%;
+}

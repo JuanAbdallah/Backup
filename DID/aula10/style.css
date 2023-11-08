@@ -1,0 +1,19 @@
+
+.flex-container{
+    background-color: lightblue;
+    display: flex;
+    flex-flow: column wrap-reverse;
+    
+
+}
+
+.flex-container div{
+    background-color: darkcyan;
+    /* height:15vh; */
+    width: 150px;
+    margin: 2%;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 15vh;
+    text-align: center;
+}

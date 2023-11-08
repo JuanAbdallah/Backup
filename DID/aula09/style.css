@@ -1,0 +1,22 @@
+*{
+    font: Arial;
+    text-align: justify;
+    border-radius: 5px;
+
+}
+.yellow{
+    color: #febe01;
+}
+.white{
+    color: white;
+}
+.black{
+    background-color: #111;
+}
+#butao{
+    color: black;
+    background-color:#febe01 ;
+}
+h1{
+    text-align: center;
+}

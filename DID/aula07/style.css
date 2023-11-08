@@ -1,0 +1,55 @@
+@font-face {
+    font-family: Anton ;
+    src: url(./assets/fontes/Anton/Anton-Regular.ttf);
+}
+@font-face {
+    font-family: Caveat;
+    src: url(./assets/fontes/Caveat/Caveat-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: Moon;
+    src: url(./assets/fontes/Moon_Dance/MoonDance-Regular.ttf);
+}
+html{
+    font-size: 16;
+}
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+
+}
+#janela{
+    background-color: red;
+    width: 550px;
+    width: 50vh;
+}
+
+#titulo{
+    font-family:'Anton';
+    color:rgb(180, 180, 24);
+    font-style: oblique;
+}
+#subtitulo{
+    font-family: 'Caveat';
+}
+p{
+    font-family: 'Moon';
+}
+.italico{
+    font-style: italic;
+}
+body{
+    font-size: 16px;
+}
+#cabecalho{
+    font-size: 1vw;
+    font-weight: 900
+    ;
+}
+
+#janela{
+    background-color: red;
+    width: 550px;
+    width: 50vh;
+}

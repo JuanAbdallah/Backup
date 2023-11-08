@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Matricula
+comment1.params=
+comment1.target=Matricula()
+comment2.params=
+comment2.target=java.util.ArrayList\ getMaterias()
+comment3.params=d
+comment3.target=void\ matricular(IDisciplina)
+comment4.params=
+comment4.target=boolean\ estaAprovado()
+comment5.params=
+comment5.target=double\ mediaGeral()
+numComments=6

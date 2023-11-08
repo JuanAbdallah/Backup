@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=Despesa
+comment1.params=
+comment1.target=Despesa()
+comment10.params=taxaExtra
+comment10.target=void\ setTaxaExtra(boolean)
+comment2.params=mesAno\ descricao\ valor\ taxaExtra
+comment2.target=Despesa(int,\ java.lang.String,\ double,\ boolean)
+comment3.params=
+comment3.target=int\ getMesAno()
+comment4.params=mesAno
+comment4.target=void\ setmMesAno(int)
+comment5.params=
+comment5.target=java.lang.String\ getescricao()
+comment6.params=descricao
+comment6.target=void\ setDescricao(java.lang.String)
+comment7.params=
+comment7.target=double\ getValor()
+comment8.params=valor
+comment8.target=void\ setValor(double)
+comment9.params=
+comment9.target=boolean\ getTaxaExtra()
+numComments=11

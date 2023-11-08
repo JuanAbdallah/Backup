@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=IDisciplina
+comment1.params=
+comment1.target=boolean\ isAprovado()
+comment2.params=
+comment2.target=double\ mediaFinal()
+numComments=3

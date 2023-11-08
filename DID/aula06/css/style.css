@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Bungee_Spice';
+    src: url(../assets/fontes/Bungee_Spice/BungeeSpice-Regular.ttf);
+}
+h1{
+    font-family:'Bungee_Spice';
+}

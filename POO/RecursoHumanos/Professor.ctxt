@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Professor
+comment1.params=
+comment1.target=double\ salario()
+comment2.params=
+comment2.target=double\ decimoTerceiro()
+comment3.params=
+comment3.target=double\ bonusEscolaridade()
+numComments=4
