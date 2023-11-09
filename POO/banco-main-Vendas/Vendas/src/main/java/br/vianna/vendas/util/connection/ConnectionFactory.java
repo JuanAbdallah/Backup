@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class ConnectionFactory {
 
@@ -29,19 +30,35 @@ public class ConnectionFactory {
         try {
             //System.out.println("Conectou "+cf.getConnection());
 
-            Cliente c = new Cliente("zezin","ze@ze",
-                    "ze2","123",
-                    LocalDate.now().minusYears(15),
-                    null);
+//            Cliente c = new Cliente("zezin","ze@ze",
+//                    "ze2","123",
+//                    LocalDate.now().minusYears(15),
+//                    null);
+//
+//          new ClienteDAO().inserir(c);
+//
+//            Categoria c1 = new Categoria(0,"Alimento", false);
+//            Categoria c2 = new Categoria(0,"Bebida", false);
+//            CategoriaDAO cDao = new CategoriaDAO();
+//            cDao.inserir(c1);
+//            cDao.inserir(c2);
 
-          new ClienteDAO().inserir(c);
+            Cliente c = new ClienteDAO().buscarPelaChave(1);
+            System.out.println(c.getNome());
 
-            Categoria c1 = new Categoria(0,"Alimento", false);
-            Categoria c2 = new Categoria(0,"Bebida", false);
-            CategoriaDAO cDao = new CategoriaDAO();
-            cDao.inserir(c1);
-            cDao.inserir(c2);
+            Cliente c1 = new ClienteDAO().buscarPelaChave(50);
+            if(c1==null) {
+                System.out.println("usuário não encontrado!!!");
+            }
+            ArrayList<Cliente> cli = new ClienteDAO().buscarTodos();
+            for (Cliente c2 : cli) {
+                System.out.println(c2.getNome());
+            }
 
+            new ClienteDAO().apagar(4);
+
+            c.setNome("Pedrin");
+            new ClienteDAO().alterar(c);
 
         } catch (ClassNotFoundException e) {
             System.out.println(e.getMessage());

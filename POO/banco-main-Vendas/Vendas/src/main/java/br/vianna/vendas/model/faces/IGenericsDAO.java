@@ -12,7 +12,7 @@ public interface IGenericsDAO<C> {
             throws SQLException, ClassNotFoundException;
     public void apagar(int key)
             throws SQLException, ClassNotFoundException;
-    public C buscarPelaChave(int cli)
+    public C buscarPelaChave(int key)
             throws SQLException, ClassNotFoundException;
     public ArrayList<C> buscarTodos()
             throws SQLException, ClassNotFoundException;
