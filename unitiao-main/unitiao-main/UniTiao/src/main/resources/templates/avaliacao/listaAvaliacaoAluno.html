@@ -1,0 +1,41 @@
+<!doctype html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:sec="http://www.w3.org/1999/xhtml"
+      lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{template.html}">
+
+<body>
+<div layout:fragment="main" class="container">
+    <div class="container">
+        <h1 class="my-4">Avaliações</h1>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Disciplina</th>
+                <th>Data da Avaliação</th>
+                <th>Nota</th>
+                <th>Ações</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="avaliacao : ${avaliacoes}">
+                <td th:text="${avaliacao.id}">Id</td>
+                <td th:text="${avaliacao.nome}">Nome</td>
+                <td th:text="${avaliacao.nomeMateria}">Materia</td>
+                <td th:text="${avaliacao.data}">Data Avaliação</td>
+                <th th:text="${avaliacao.nota}">Nota</th>
+                <td>
+                    <a th:href="@{/avaliacao/avaliacao={id}/aluno={idAluno}(id = ${avaliacao.id}, idAluno = ${idAluno})}" class="btn btn-sm btn-warning">Ver Avaliação</a>
+
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <span th:text="${erro}" class="text-danger"></span>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,246 @@
+/*grids*/
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    background-color: rgb(71, 100, 71);
+    background-image: url("../assets/bg/bg_jungle2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.grid {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template:
+        'titulo' 1fr
+        'menu' 1fr
+        'jogo' minmax(650px, 100%)
+        'rodape' auto;
+    align-items: center;
+}
+.grid-menu{
+    display: grid;
+    width: 50%;
+    height: 100%;
+    padding: 0px 25% 0px 25%;
+    grid-template: 
+    "principal jogo" .5fr
+    /1fr 1fr
+    ;
+}
+.jogo1 {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    padding: 50px 50px;
+    grid-template:
+        'imagem1 imagem2 imagem3 imagem4 imagem5' 1fr
+        'imagem6 imagem7 imagem8 imagem9 imagem10' 1fr
+        'imagem11 imagem12 imagem13 imagem14 imagem15' 1fr
+        /1fr 1fr 1fr 1fr 1fr
+    ;
+}
+
+/*Imagens*/
+.img {
+    height: 128px;
+    width: 128px;
+    border-radius: 25%;
+    border: 1px solid;
+    cursor: pointer;
+    margin-bottom: 20px;
+
+}
+.img:hover{
+    transform: scale(1.2);
+}
+
+/*Cronometro*/
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 3rem;
+}
+
+.cronometro {
+    display: flex;
+    font-size: 50px;
+    grid-area: cronometro;
+    font-family: 'clock';
+    background-color: #000000;
+    border-style: solid;
+    border-color: rgb(184, 3, 3);
+    border-radius: 10px;
+
+    color: white;
+}
+
+.tempo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 90px;
+    margin-right: 5px;
+}
+
+.separador {
+    padding: 0 10px;
+}
+
+.botoes {
+    display: flex;
+    gap: 1rem;
+}
+
+.botao {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 1px solid #000;
+    transition: all 0.2s ease-in-out;
+}
+.botao:hover{
+    transform:scale(1.1);
+}
+/*Elementos*/
+h1{
+    font-family: 'Peralta';
+    font-size: 4em;
+    color: darkred;
+     text-shadow: 0 0 5px black; 
+    -webkit-text-stroke:1px white;
+    
+    
+}
+#titulo{
+    padding: 0px 0px 0px 0px;
+    grid-area: titulo;
+    text-align: center;
+    
+}
+#menu{
+    grid-area: menu;
+    text-align: center;
+    
+}
+
+#rodape {
+    grid-area: rodape;
+    font-family: Arial, sans-serif; 
+    
+}
+
+.jogo {
+    grid-area: jogo;
+    
+}
+
+#imagem1 {
+    grid-area: imagem1;
+
+}
+
+#imagem2 {
+    grid-area: imagem2;
+}
+
+#imagem3 {
+    grid-area: imagem3;
+
+}
+
+#imagem4 {
+    grid-area: imagem4;
+
+}
+
+#imagem5 {
+    grid-area: imagem5;
+
+}
+
+#imagem6 {
+    grid-area: imagem6;
+
+}
+
+#imagem7 {
+    grid-area: imagem7;
+
+}
+
+#imagem8 {
+    grid-area: imagem8;
+
+}
+
+#imagem9 {
+    grid-area: imagem9;
+
+}
+
+#imagem10 {
+    grid-area: imagem10;
+
+}
+
+#imagem11 {
+    grid-area: imagem11;
+
+}
+
+#imagem12 {
+    grid-area: imagem12;
+
+}
+
+#imagem13 {
+    grid-area: imagem13;
+
+}
+
+#imagem14 {
+    grid-area: imagem14;
+
+}
+
+#imagem15 {
+    grid-area: imagem15;
+
+}
+
+#imagem16 {
+    grid-area: imagem16;
+
+}
+
+#imagem17 {
+    grid-area: imagem17;
+
+}
+
+#imagem18 {
+    grid-area: imagem18;
+
+}
+
+#imagem19 {
+    grid-area: imagem19;
+
+}
+
+/*Fontes*/
+@font-face {
+    font-family: clock;
+    src: url(../assets/fonts/alarm\ clock.ttf);
+}
+
+@font-face {
+    font-family: Peralta;
+    src: url(../assets/fonts/Peralta-Regular.ttf);
+}

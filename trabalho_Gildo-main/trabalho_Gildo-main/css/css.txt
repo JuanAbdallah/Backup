@@ -1,0 +1,10 @@
+Na página principal (index.html), inserimos um fundo de floresta, que está relacionado com o tema principal do jogo (a fauna brasileira). O título foi destacado em vermelho,
+visando o contraste com o verde presente no fundo com o propósito de despertar o interesse pelo jogo. Além disso, o contraste foi escolhido para melhorar a legibilidade e 
+compreensão do texto. Na narrativa e nas instruções, optamos pelo uso da cor amarela com o objetivo de direcionar o foco, e também aplicamos um fundo preto com baixa opacidade 
+para facilitar a leitura. Os botões são brancos para demonstrar suavidade e também são arredondados para melhorar a aparência. 
+Colocamos a fonte Peralta, que foi baixada no googlefonts, para destacar o título do jogo e despertar a curiosidade e interesse pelo jogo em quem for jogar. Na parte da história do jogo e das instruções, foi utilizada a fonte Arial serifada para facilitar a leitura.
+
+A página jogo (jogo.html) possui o mesmo fundo, título e estilo de botões, o que muda que usamos uma fonte no cronômetro e colocamos um background preto com uma borda vermelha 
+para deixa-lo parecido com um relógio digital, e as imagensforam arredondadas para gerar uma melhor aparência.
+    
+

@@ -1,0 +1,106 @@
+/*grids*/
+body{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    background-image:url("../assets/bg/bg_jungle2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+.grid{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    gap: 20px;
+    grid-template: 
+    "titulo" 2fr
+    "menu" 1fr
+    "historia" 2fr
+    "instrucao" 2fr
+    "rodape"1fr
+    ;
+}
+.grid-menu{
+    display: grid;
+    width: 50%;
+    height: 100%;
+    padding: 0px 25% 0px 25%;
+    grid-template: 
+    "principal jogo" .5fr
+    /1fr 1fr
+    ;
+}
+/*elementos*/
+#titulo{
+    padding: 0px 0px 0px 0px;
+    grid-area: titulo;
+    text-align: center;
+    
+}
+#menu{
+    grid-area: menu;
+    text-align: center;
+    
+}
+#instrucao{
+    grid-area: instrucao;
+    
+}
+.introducao{
+    grid-area: historia;
+    
+    color: yellow; 
+    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    font-size: 16px; 
+    font-family: Arial, sans-serif; 
+    padding: 0px 20px 0px 20px;
+}
+#rodape{
+    grid-area: rodape;
+    font-family: Arial, sans-serif; 
+    
+}
+#principal{
+    grid-area: principal;
+    
+}
+#jogo{
+    grid-area: jogo;
+   
+    
+}
+
+.botoes {
+    display: flex;
+    gap: 1rem;
+}
+
+.botao {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 1px solid #000;
+    transition: all 0.2s ease-in-out;
+}
+.botao:hover{
+    transform:scale(1.1);
+}
+h1{
+    font-family: 'Peralta';
+    font-size: 4em;
+    color: darkred;
+     text-shadow: 0 0 5px black; 
+    -webkit-text-stroke:1px white;
+}
+.bg{
+    background-color: #00000049;
+}
+/* fontes */
+@font-face {
+    font-family: Peralta;
+    src: url(../assets/fonts/Peralta-Regular.ttf);
+}

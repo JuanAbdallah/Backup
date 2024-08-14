@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>UniTião</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+<header layout:fragment="nav">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="/">UniTião</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Início</a>
+                    </li>
+                    <li sec:authorize="hasRole('ROLE_ADMIN')" class="nav-item active">
+                        <a href="/user" class="nav-link">Usuários</a>
+                    </li>
+                    <li sec:authorize="hasRole('ROLE_ADMIN')" class="nav-item active">
+                        <a href="/materias" class="nav-link">Matérias</a>
+                    </li>
+                    <li sec:authorize="hasRole('ROLE_PROFESSOR')" class="nav-item active">
+                        <a href="/materias/professor" class="nav-link">Matérias</a>
+                    </li>
+                    <li sec:authorize="hasRole('ROLE_ALUNO')" class="nav-item active">
+                         <a href="/materias/aluno" class="nav-link">Matérias</a>
+                     </li>
+<!--                    <li sec:authorize="isAuthenticated()" class="nav-item active">-->
+<!--                        <a th:href="@{/materias/alunoId={id}(id = session.)}" class="nav-link">Matérias2</a>-->
+<!--                    </li>-->
+                    <li sec:authorize="hasRole('ROLE_ADMIN')" class="nav-item active">
+                        <a href="/avaliacao" class="nav-link">Avaliacao</a>
+                    </li>
+                    <li sec:authorize="hasRole('ROLE_ADMIN') or hasRole('ROLE_PROFESSOR')" class="nav-item active">
+                        <a href="/dashboard" class="nav-link">Dashboard</a>
+                    </li>
+<!--                    <li sec:authorize="not isAuthenticated()" class="nav-item">-->
+<!--                        <a class="nav-link" href="/login">login</a>-->
+<!--                    </li>-->
+                    <li sec:authorize="isAuthenticated()" class="nav-item">
+                        <form th:action="@{/logout}" method="post">
+                            <button class="btn btn-sm btn-outline-secondary">Sair</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<main layout:fragment="main">
+
+</main>
+<style>
+    .jumbotron {
+        background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+        background-size: cover;
+        color: #fff;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+        padding: 150px 0;
+        margin-bottom: 0;
+    }
+
+    .jumbotron h1 {
+        font-size: 4rem;
+        font-weight: bold;
+    }
+
+    .jumbotron p {
+        font-size: 1.5rem;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .feature {
+        padding: 80px 0;
+        background-color: #f8f9fa;
+    }
+
+    .feature i {
+        font-size: 4rem;
+        margin-bottom: 20px;
+    }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"
+        integrity="sha384-ZmpFkQF8EIQvJ8eBaRV8qta/VRrZy4Hb+8Q+AdJ7rJhG2y0gs0pD2h1usD2J8kqD"
+        crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo</title>
+    <link rel="stylesheet" href="./css/jogo.css">
+</head>
+
+<body>
+    <div class="grid">
+        <div id="titulo">
+            <h1>Safári Brasileiro: O Encontro Mágico</h1>
+        </div>
+        <div id="menu">
+            <div class="grid-menu">
+                <div id="principal"><button class="botao" id="butInicial">Principal</button></div>
+                <div id="jogo"><button class="botao" id="butJogo">Jogo</button></div>
+
+            </div>
+        </div>
+        <div class="jogo">
+            <div class="container">
+                <div class="cronometro">
+                    <div class="tempo" id="minutos">01</div>
+                    <div class="separador">:</div>
+                    <div class="tempo" id="segundos">00</div>
+                    <div class="separador">:</div>
+                    <div class="tempo" id="milisegundos">000</div>
+                </div>
+                <div class="botoes">
+                    <button class="botao" id="iniciar" onclick="iniciarJogo()">Iniciar</button>
+                </div>
+            </div>
+
+
+            <div class="imagem grid2 jogo1">
+
+            </div>
+
+        </div>
+        <div id="rodape">
+            <dl>
+                <dt>Trabalho TWA e DID</dt>
+                <dt>Alunos:</dt>
+                <dd>Juan Abdallah Ritti de Oliveira</dd>
+                <dd>Rafael Ferreira Campos</dd>
+            </dl>
+        </div>
+    </div>
+
+    <script src="./js/jogo.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:sec="http://www.w3.org/1999/xhtml"
+      lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{template.html}">
+<body>
+<div layout:fragment="main" sec:authorize="hasRole('ROLE_ADMIN') or hasRole('ROLE_PROFESSOR')">
+    <div class="container">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h1>Alunos <span th:text="' - ' + ${nomeMateria}"></span></h1>
+            </div>
+            <div class="container my-4">
+                <form th:action="@{/alunos/cadMateria/{materia}(materia=${nomeMateria})}" method="get" th:object="${aluno}" class="form-inline mb-3" sec:authorize="hasRole('ROLE_ADMIN')">
+                    <div class="form-group mr-2">
+                        <label for="aluno">Aluno:</label>
+                        <select th:field="*{login}" class="form-control" id="aluno">
+                            <option th:each="a : ${alunos}" th:value="${a.login}" th:text="${a.nome} + ' - ' + ${a.login}">Aluno</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                </form>
+
+                <a class="btn btn-success btn-sm" th:href="@{/avaliacao/new/{materia}(materia=${nomeMateria})}">Cadastrar Avaliação</a>
+                <br>
+
+                <table class="table table-striped table-bordered">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Login</th>
+                        <th>Avaliação</th>
+                        <th sec:authorize="hasRole('ROLE_ADMIN')">Excluir</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="u : ${lista}">
+                        <td th:text="${u.nome}">nome</td>
+                        <td th:text="${u.email}">email</td>
+                        <td th:text="${u.login}">login</td>
+                        <td>
+                            <a th:href="@{/avaliacao/{nomeMateria}/{id}(nomeMateria=${nomeMateria}, id=${u.id})}" class="btn btn-success btn-sm">Ver</a>
+                        </td>
+                        <td sec:authorize="hasRole('ROLE_ADMIN')">
+                            <a th:href="@{/alunos/{id}/{nomeMateria}(id = ${u.id}, nomeMateria = ${nomeMateria})}"
+                               class="btn btn-danger btn-sm">Excluir</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ea1a39ad-7ffc-4172-8246-34204acc358d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/vianna/edu/academia/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/vianna/edu/academia/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/vianna/edu/academia/controller/actions/imp/CallDeletarReserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/vianna/edu/academia/controller/actions/imp/CallDeletarReserva.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/vianna/edu/academia/controller/actions/imp/CallSaveUserAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/vianna/edu/academia/controller/actions/imp/CallSaveUserAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/vianna/edu/academia/controller/actions/imp/SaveHoraReserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/vianna/edu/academia/controller/actions/imp/SaveHoraReserva.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/vianna/edu/academia/model/dao/imp/ReservaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/vianna/edu/academia/model/dao/imp/ReservaDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/CadastraReserva.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/CadastraReserva.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/homeLogado.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/homeLogado.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Jsp File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2f9OPY9m7nUquUMIR1G4sSIsPr0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Maven.Academia [org.apache.maven.plugins:maven-clean-plugin:3.2.0:clean].executor": "Run",
+    "Maven.Academia [org.eclipse.jetty:jetty-maven-plugin:11.0.13:run].executor": "Run",
+    "Maven.ApostaBet [org.eclipse.jetty:jetty-maven-plugin:11.0.13:run].executor": "Run",
+    "Maven.ApostaBet [org.eclipse.jetty:jetty-maven-plugin:11.0.13:start].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/juana/OneDrive/Desktop/trabalhofitnessz/academia/src/main/webapp/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="br.vianna.edu.academia.controller.actions.imp" />
+      <recent name="br.vianna.edu.academia.controller" />
+      <recent name="br.vianna.edu.academia.model" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\juana\OneDrive\Desktop\trabalhofitnessz\academia\src\main\webapp\images" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.vianna.edu.academia.Main" />
+      <module name="Academia" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.vianna.edu.academia.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="academia" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="academia" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-11.0.22-corretto-11.0.22-f644763e9732-4a89cc43" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-f644763e9732-c0c073db" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ea1a39ad-7ffc-4172-8246-34204acc358d" name="Changes" comment="" />
+      <created>1713209804886</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713209804886</updated>
+      <workItem from="1713209806053" duration="954000" />
+      <workItem from="1713275717297" duration="3625000" />
+      <workItem from="1713294934729" duration="3320000" />
+      <workItem from="1713358585265" duration="361000" />
+      <workItem from="1713362752999" duration="6264000" />
+      <workItem from="1713446377665" duration="4102000" />
+      <workItem from="1713468976223" duration="7095000" />
+      <workItem from="1713534365775" duration="1670000" />
+      <workItem from="1713578725430" duration="103000" />
+      <workItem from="1713880732797" duration="5839000" />
+      <workItem from="1713896990670" duration="2807000" />
+      <workItem from="1714951332163" duration="3353000" />
+      <workItem from="1714956305522" duration="3488000" />
+      <workItem from="1715019257222" duration="575000" />
+      <workItem from="1715092589365" duration="9035000" />
+      <workItem from="1715176427633" duration="6084000" />
+      <workItem from="1715198642054" duration="5051000" />
+      <workItem from="1715259244290" duration="13427000" />
+      <workItem from="1715349520491" duration="8270000" />
+      <workItem from="1715435587438" duration="5582000" />
+      <workItem from="1715455543682" duration="5835000" />
+      <workItem from="1715484942843" duration="95000" />
+      <workItem from="1715524231426" duration="4366000" />
+      <workItem from="1715549010549" duration="12425000" />
+      <workItem from="1715606923605" duration="11165000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

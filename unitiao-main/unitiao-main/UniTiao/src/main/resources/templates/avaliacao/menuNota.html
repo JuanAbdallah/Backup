@@ -1,0 +1,91 @@
+<!doctype html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:sec="http://www.w3.org/1999/xhtml"
+      lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{template.html}">
+
+<body>
+<div layout:fragment="main" class="container">
+    <div class="container">
+        <h1 class="my-4">Cadastrar Nota</h1>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Disciplina</th>
+                <th>Data da Avaliação</th>
+                <th>Nota</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td th:text="${avaliacao.nome}"></td>
+                <td th:text="${avaliacao.nomeMateria}"></td>
+                <td th:text="${avaliacao.data}"></td>
+                <td th:text="${nota.nota}"></td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Comentário Professor</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td >
+                    <p th:text="${comentarioP.comentario}"></p><br>
+                    <form sec:authorize="hasRole('ROLE_ADMIN') or hasRole('ROLE_PROFESSOR')"
+                          th:action="@{/comentario/professor/{idComentario}(idComentario = ${comentarioP.id})}" method="post" th:object="${comentario}">
+                        <div class="form-group">
+                            <label for="comentario">Comentario:</label>
+<!--                            <input type="hidden" name="id" th:value="${comentarioP.id}" th:field="*{id}">-->
+                            <input type="text" id="comentario" class="form-control" th:field="*{comentario}" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Salvar</button>
+                        <span th:text="${erro}" class="text-danger"></span>
+                    </form>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Comentário Aluno</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td >
+                    <p th:text="${comentarioA.comentario}"></p><br>
+                    <form sec:authorize="hasRole('ROLE_ADMIN') or hasRole('ROLE_ALUNO')"
+                          th:action="@{/comentario/aluno/{idComentario}(idComentario = ${comentarioA.id})}" method="post" th:object="${comentario}" >
+                        <div class="form-group">
+                            <label for="comentarioA">Comentario:</label>
+                            <input type="text" id="comentarioA" class="form-control" th:field="*{comentario}" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Salvar</button>
+                        <span th:text="${erro}" class="text-danger"></span>
+                    </form>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <form sec:authorize="hasRole('ROLE_ADMIN') or hasRole('ROLE_PROFESSOR')"
+              th:action="@{/avaliacao/saveNota/{idAvaliacao}/{idAluno}(idAvaliacao = ${avaliacao.id}, idAluno = ${idAluno})}"
+              th:object="${nota}" method="post">
+            <div class="form-group">
+                <label for="nota">Nota</label>
+                <input type="number" id="nota" class="form-control" th:field="*{nota}" step="0.01" min="0" max="10" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Salvar</button>
+            <span th:text="${erro}" class="text-danger"></span>
+        </form>
+
+    </div>
+</div>
+
+</body>
+</html>

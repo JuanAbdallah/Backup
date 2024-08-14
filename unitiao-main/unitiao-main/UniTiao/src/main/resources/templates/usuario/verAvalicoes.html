@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minhas Avaliações</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1>Minhas Avaliações</h1>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Data</th>
+            <th>Disciplina</th>
+            <th>Nota</th>
+            <th>Comentário</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="avaliacao : ${avaliacoes}">
+            <td th:text="${avaliacao.nome}">Nome</td>
+            <td th:text="${avaliacao.data}">Data</td>
+            <td th:text="${avaliacao.nomeMateria}">Disciplina</td>
+            <td th:text="${avaliacao.nota}">Nota</td>
+            <td>
+                <form th:action="@{/avaliacao/comentar/{id}(id=${avaliacao.id})}" method="get">
+                    <button type="submit" class="btn btn-primary">Comentar</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

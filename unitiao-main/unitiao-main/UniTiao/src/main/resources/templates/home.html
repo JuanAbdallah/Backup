@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:sec="http://www.w3.org/1999/xhtml"
+      lang="en"
+      layout:decorate="~{template.html}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Explore o Futuro da Educação</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<main layout:fragment="main">
+    <section class="home">
+        <div class="jumbotron text-center">
+            <div class="container">
+                <div sec:authorize="not isAuthenticated()">
+                    <h1 class="display-2">Explore o Futuro da Educação</h1>
+                    <p class="lead">Transforme seu aprendizado com nossa plataforma premiada e inovadora.</p>
+                    <a href="/register" class="btn btn-primary btn-lg">Entrar</a>
+                </div>
+
+
+                <div class="container" sec:authorize="isAuthenticated()">
+                    <p>Olá, <span id="nomeUsuario"></span>!</p>
+                </div>
+            </div>
+
+            <script>
+                $(document).ready(function () {
+                    $.ajax({
+                        url: '/nome',
+                        type: 'GET',
+                        success: function (data) {
+                            $('#nomeUsuario').text(data);
+                        },
+                        error: function (xhr, status, error) {
+                            console.error('Erro ao carregar nome do usuário:', error);
+
+                        }
+                    });
+                });
+            </script>
+        </div>
+    </section>
+</main>
+
+
+</body>
+</html>

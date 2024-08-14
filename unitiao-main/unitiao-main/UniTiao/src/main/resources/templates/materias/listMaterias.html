@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:sec="http://www.w3.org/1999/xhtml"
+      lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{template.html}"
+>
+<body>
+<div layout:fragment="main" class="container">
+    <div class="container">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h1>Disciplinas</h1>
+            </div>
+            <div class="container my-4">
+<!--                <form th:action="@{/materias}" method="get" th:object="${materias}" class="form-inline mb-3">-->
+<!--                    <div class="form-group mr-2">-->
+<!--                        <label for="nome" class="mr-2">Nome:</label>-->
+<!--                        <input type="text" id="nome" class="form-control mr-2" th:field="${materias.nome}">-->
+<!--                    </div>-->
+<!--                    <button type="submit" class="btn btn-primary">Pesquisar</button>-->
+<!--                </form>-->
+                <form sec:authorize="hasRole('ROLE_ADMIN')" method="get" th:action="@{/materias/new}" class="mb-3">
+                    <button type="submit" class="btn btn-success">Cadastrar Disciplina</button>
+                </form>
+
+                <table class="table table-striped table-bordered">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th sec:authorize="hasRole('ROLE_ADMIN')">Id</th>
+                        <th>Nome</th>
+                        <th>Professor</th>
+                        <th sec:authorize="hasRole('ROLE_ADMIN') or hasRole('ROLE_PROFESSOR')">Alunos</th>
+                        <th sec:authorize="hasRole('ROLE_ALUNO')">Avaliações</th>
+                        <th sec:authorize="hasRole('ROLE_ADMIN')">Editar</th>
+                        <th sec:authorize="hasRole('ROLE_ADMIN')">Apagar</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="m : ${lista}">
+                        <td th:text="${m.id}" sec:authorize="hasRole('ROLE_ADMIN')">id</td>
+                        <td th:text="${m.nome}">nome</td>
+                        <td th:text="${m.nomeProfessor}">Professor</td>
+                        <td sec:authorize="hasRole('ROLE_ALUNO')">
+                            <a th:href="@{/avaliacao/aluno/{nomeMateria}(nomeMateria=${m.nome})}" class="btn btn-success btn-sm">Ver</a>
+                        </td>
+                        <td sec:authorize="hasRole('ROLE_ADMIN') or hasRole('ROLE_PROFESSOR')">
+                            <a th:href="@{/alunos/{nomeMateria}(nomeMateria = ${m.nome})}" class="btn btn-success btn-sm">Ver</a>
+                        </td>
+                        <td sec:authorize="hasRole('ROLE_ADMIN')">
+                            <a th:href="@{materias/edit/{id}(id = ${m.id})}" class="btn btn-warning btn-sm">Alterar</a>
+                        </td>
+                        <td sec:authorize="hasRole('ROLE_ADMIN')">
+                            <a th:href="@{/materias/delete/{id}(id = ${m.id})}" class="btn btn-danger btn-sm">Apagar</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

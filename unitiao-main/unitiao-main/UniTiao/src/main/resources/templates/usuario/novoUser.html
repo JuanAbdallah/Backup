@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{template.html}"
+>
+
+<body>
+
+
+<h1 layout:fragment="titulo" class="text-center my-4">
+    Cadastro de Usuário
+</h1>
+
+<div layout:fragment="main" class="container">
+
+    <div class="card mx-auto" style="max-width: 600px;">
+        <div class="card-body">
+            <form th:action="@{/user}" method="POST" th:object="${infos}" >
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" class="form-control" th:field="*{nome}" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" class="form-control" th:field="*{email}" required>
+                </div>
+                <div class="form-group">
+                    <label for="login">Login:</label>
+                    <input type="text" id="login" class="form-control" th:field="*{login}" required>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" class="form-control" th:field="*{senha}" required>
+                </div>
+                <div class="form-group">
+                    <label for="tipo">Tipo:</label>
+                    <select id="tipo" class="form-control" th:field="*{tipo}">
+                        <option value="PROFESSOR">Professor</option>
+                        <option value="ALUNO">Aluno</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Salvar</button>
+                <br />
+                <span th:text="${erro}" class="text-danger"></span>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

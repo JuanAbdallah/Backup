@@ -1,0 +1,40 @@
+<!doctype html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:sec="http://www.w3.org/1999/xhtml"
+      lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{template.html}">
+
+<body>
+<div layout:fragment="main" class="container" sec:authorize="hasRole('ROLE_ADMIN')">
+    <div class="container">
+        <h1 class="my-4">Avaliações </h1>
+<!--        <a class="btn btn-success btn-sm" th:href="@{/avaliacao/new/{materia}(materia=${nomeMateria})}">Cadastrar Avaliação</a>-->
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Disciplina</th>
+                <th>Data da Avaliação</th>
+                <th>Ações</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="avaliacao : ${avaliacoes}">
+                <td th:text="${avaliacao.id}">Id</td>
+                <td th:text="${avaliacao.nome}">Nome</td>
+                <td th:text="${avaliacao.nomeMateria}">Materia</td>
+                <td th:text="${avaliacao.data}">Data Avaliação</td>
+                <td>
+                    <a th:href="@{/avaliacao/editar/{id}(id=${avaliacao.id})}" class="btn btn-sm btn-warning">Editar</a>
+                    <a th:href="@{/avaliacao/excluir/{id}(id=${avaliacao.id})}" class="btn btn-sm btn-danger">Excluir</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <span th:text="${erro}" class="text-danger"></span>
+    </div>
+</div>
+
+</body>
+</html>
