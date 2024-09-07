@@ -1,7 +1,0 @@
-#BlueJ class context
-comment0.target=Aluno
-comment1.params=vNome\ vNota
-comment1.target=Aluno(java.lang.String,\ double)
-comment2.params=
-comment2.target=boolean\ isAprovado()
-numComments=3

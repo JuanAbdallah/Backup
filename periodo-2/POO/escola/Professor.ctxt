@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=Professor
-comment1.params=
-comment1.target=java.lang.String\ toString()
-comment2.params=salario
-comment2.target=void\ setSalario(double)
-comment3.params=
-comment3.target=double\ getSalario()
-numComments=4
