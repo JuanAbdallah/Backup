@@ -1,0 +1,3 @@
+Projeto Em java utilizando jsp de uma academia onde possui um usuario que consegue faze login e senha, sendo ele cadastrado pelo admin, uma area para ver suas fichas, que tambem
+sao cadastradas pelo admin, tanto o usuario quanto o admin conseguem ver quantas pessoas estao na academia (Ajax), existe uma area para cadastro de horarios para usar a piscina
+por parte do admin, e o usuario pode marcar horarios e ver qual horario ele marcou.
